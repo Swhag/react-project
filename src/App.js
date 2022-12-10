@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { Component, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -95,6 +95,7 @@ function App() {
       >
         Add Post
       </button>
+      <Modal2></Modal2>
     </div>
   );
 }
@@ -108,6 +109,19 @@ function Modal(props) {
       <button>Edit Post</button>
     </div>
   );
+}
+
+class Modal2 extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: 'kim',
+      age: 20,
+    };
+  }
+  render() {
+    return <div>hifs {this.state.name}</div>;
+  }
 }
 
 export default App;
